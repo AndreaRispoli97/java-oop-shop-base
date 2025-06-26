@@ -12,8 +12,9 @@ public class Prodotto {
     public int iva;
 
     // Costruttore
-    public Prodotto(int codice, String nome, String descrizione, float prezzo, int iva) {
-        this.codice = codice;
+    public Prodotto(String nome, String descrizione, float prezzo, int iva) {
+        Random rand = new Random();
+        this.codice = rand.nextInt(10000);
         this.nome = nome;
         this.descrizione = descrizione;
         this.prezzo = prezzo;
@@ -21,9 +22,20 @@ public class Prodotto {
     }
 
     // Metodi
-    public void randomCode(int codice) {
-        Random rand = new Random();
-        this.codice = rand.nextInt(10000);
+
+    // *Errato
+
+    // public void randomCode(int codice) {
+    // Random rand = new Random();
+    // this.codice = rand.nextInt(10000);
+    // }
+
+    public float prezzoBase() {
+        return this.prezzo;
+    }
+
+    public String nomeEsteso() {
+        return codice + "-" + nome;
     }
 
     public float prezzoIva() {
