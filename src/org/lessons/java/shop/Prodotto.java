@@ -22,14 +22,6 @@ public class Prodotto {
     }
 
     // Metodi
-
-    // *Errato
-
-    // public void randomCode(int codice) {
-    // Random rand = new Random();
-    // this.codice = rand.nextInt(10000);
-    // }
-
     public float prezzoBase() {
         return this.prezzo;
     }
